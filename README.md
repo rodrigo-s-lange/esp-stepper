@@ -10,6 +10,16 @@ Current scope:
 - one GPTimer per motor
 - optional AT control
 
+## Target support
+
+Validated build target baseline:
+
+- `ESP32`
+- `ESP32-S3`
+
+The current implementation uses `GPTimer`, which is supported by ESP-IDF 6.0 on both targets.
+On `ESP32` with `4 MB` flash, the stepper engine itself remains lightweight. The practical limit comes from the full firmware profile enabled together with it.
+
 ## Purpose
 
 The component is meant to be the base motion engine for external drivers that expose:
